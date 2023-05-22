@@ -36,7 +36,7 @@ class CalendarsController < ApplicationController
       end
 
       wday_num = (@todays_date + x).wday
-      wday_num -= 7 if wday_num >= 7
+        wday_num = 0 if wday_num == 7
 
       days = {
         month: (@todays_date + x).month,
